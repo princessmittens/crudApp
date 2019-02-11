@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  departmentNumber_94: MyString
+  departmentName_94: MyString
+  phoneNumber_94: MyString
+
+two:
+  departmentNumber_94: MyString
+  departmentName_94: MyString
+  phoneNumber_94: MyString

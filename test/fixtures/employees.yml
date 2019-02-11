@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  employeeNumber_94: MyString
+  lastName_94: MyString
+  firstName_94: MyString
+  position_94: MyString
+  departmentNumber_94: MyString
+  startDate_94: 2019-02-07
+  salary_94: 1
+
+two:
+  employeeNumber_94: MyString
+  lastName_94: MyString
+  firstName_94: MyString
+  position_94: MyString
+  departmentNumber_94: MyString
+  startDate_94: 2019-02-07
+  salary_94: 1

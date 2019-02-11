@@ -1,0 +1,52 @@
+<%= form_with(model: employee, local: true) do |form| %>
+  <% if employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :employeeNumber_94 %>
+    <%= form.text_field :employeeNumber_94, id: :employee_employeeNumber_94 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lastName_94 %>
+    <%= form.text_field :lastName_94, id: :employee_lastName_94 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :firstName_94 %>
+    <%= form.text_field :firstName_94, id: :employee_firstName_94 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :position_94 %>
+    <%= form.text_field :position_94, id: :employee_position_94 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :departmentNumber_94 %>
+    <%= form.text_field :departmentNumber_94, id: :employee_departmentNumber_94 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :startDate_94 %>
+    <%= form.date_select :startDate_94, id: :employee_startDate_94 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :salary_94 %>
+    <%= form.number_field :salary_94, id: :employee_salary_94 %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,28 @@
+version: '2'
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: iambatman   
+      MYSQL_USER: tEmp
+      MYSQL_PASSWORD: iambatman
+      MYSQL_DATABASE: crud
+    ports:
+      - "3307:3306" 
+    volumes:
+     - db-data:/var/lib/mysql 
+  app:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/crud-app
+    ports:
+      - "3001:3000"
+    links:
+      - db:sql_srv
+    depends_on:
+      - db
+
+volumes: 
+  db-data:
