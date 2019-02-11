@@ -2,7 +2,7 @@
 
 * Ruby version: 2.2
 
-* Database creation: MySQL
+* Database creation: MySQL Server
 
 * Services: Crud
 
