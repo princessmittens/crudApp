@@ -4,17 +4,16 @@ services:
     image: mysql:5.7
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: iambatman   
-      MYSQL_USER: tEmp
-      MYSQL_PASSWORD: iambatman
+      MYSQL_ROOT_PASSWORD: iambatman
+      MYSQL_USER: root
+      MYSQL_PASS: iambatman 
       MYSQL_DATABASE: crud
+      MYSQL_HOST: littlepeepee.cbxvbo02ioar.us-east-1.rds.amazonaws.com
     ports:
-      - "3307:3306" 
-    volumes:
-     - db-data:/var/lib/mysql 
+      - "3306:3306" 
   app:
     build: .
-    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    command: bundle exec rails s
     volumes:
       - .:/crud-app
     ports:
@@ -23,6 +22,3 @@ services:
       - db:sql_srv
     depends_on:
       - db
-
-volumes: 
-  db-data:

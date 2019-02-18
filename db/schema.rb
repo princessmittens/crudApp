@@ -10,22 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20190218214959) do
 
-  create_table "departments", primary_key: "departmentNumber_94", id: :string, limit: 50, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
-    t.string "departmentName_94", limit: 50
-    t.string "phoneNumber_94", limit: 50
+  create_table "departments", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "departmentNumber_94"
+    t.string "departmentName_94"
+    t.string "phoneNumber_94"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  create_table "employees", primary_key: "employeeNumber_94", id: :string, limit: 50, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci" do |t|
-    t.string "lastName_94", limit: 50
-    t.string "firstName_94", limit: 50
-    t.string "position_94", limit: 50
-    t.string "departmentNumber_94", limit: 50
+  create_table "employees", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "employeeNumber_94"
+    t.string "lastName_94"
+    t.string "firstName_94"
+    t.string "position_94"
+    t.string "departmentNumber_94"
     t.date "startDate_94"
     t.integer "salary_94"
-    t.index ["departmentNumber_94"], name: "departmentNumber-94"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "employees", "departments", column: "departmentNumber_94", primary_key: "departmentNumber_94", name: "employees_ibfk_1"
 end

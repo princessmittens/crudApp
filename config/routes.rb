@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   resources :employees
   resources :departments
+  resources :employees
+  resources :departments
   resources :tasks
+  
+  root to: 'employees#index'
   # get 'tasks/index'
-
+  
   # get 'tasks/show'
 
   # get 'tasks/new'
